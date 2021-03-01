@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>로직 풀이 (1.0.1)</title>
+        <h1>NemoNemo_Logic</h1>
+        <h2 id='부제'></h2>
+        <style>
+            input{
+                outline: none;
+            }
+            button{
+                outline: none;
+            }
+            textarea{
+                outline: none;
+            }
+            #입력확인창{
+                border: 0px solid black;
+                width: 400px;
+                height: 400px;
+                margin-bottom: 15px;
+                visibility: hidden;
+            }
+            .표{
+                border: 0.5px solid rgb(68, 68, 68);
+                table-layout: fixed;
+                border-spacing: 0px;
+                text-align: center;
+                font-size: 15px;
+                position: absolute;
+                top: 140px;
+            }
+            .표2{
+                border: 0.5px solid rgb(68, 68, 68);
+                table-layout: fixed;
+                border-spacing: 0px;
+                text-align: center;
+                font-size: 15px;
+                position: absolute;
+                top: 140px;
+            }
+            .칸{
+                border: 0.25px solid rgb(68, 68, 68);
+                margin: 0px;
+                margin-left: -0.5px;
+                margin-right: -0.5px;
+                padding: 0.25px;
+            }
+            .칸2{
+                border: 0.25px solid rgb(68, 68, 68);
+                margin: 0px;
+                margin-left: -0.5px;
+                margin-right: -0.5px;
+                padding: 0.25px;
+            }
+            .start{
+                width: 70px;
+                height: 35px;
+                font-size: 40px;
+                font-weight: bold;
+                margin-left: 20px;
+                margin-right: 5px;
+                margin-bottom: 10px;
+                float: left;
+            }
+            .tt{
+                font-size: 30px;
+                font-weight: bold;
+                float: left;
+                margin-bottom: 10px;
+            }
+            #test{
+                margin-bottom: 20px;
+            }
+            #안내{
+                position: absolute;
+                left: 108px;
+                top: 32px;
+                font-size: 18px;
+            }
+            .제출버튼{
+                width: 59px;
+                height: 30px;
+                font-size: 16px;
+                position: absolute;
+                top: 29px;
+                left: 513px;
+                visibility: hidden;    
+            }
+            .인풋{
+                width: 230px;
+                line-height: 26px;
+                margin-bottom: -5px;
+                font-size: 26px;
+                overflow-y:visible;
+            }
+            #i{
+                z-index: 300000;
+    position: absolute;
+    width: 150px;
+    top: 12px;
+    left: 380px;
+    visibility: hidden;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <script src="NemoNemo_Logic.js"></script>
+        <button id='초기화'onclick="초기화();"style='width:90px;height:30px;font-size:16px;position:absolute;top:87px;left:120px;visibility:hidden'>다시하기</button>
+        <image id='i' src='NemoNemo_Logic.jpg' alt='이미지'></image>
+        <button id='제출'onclick="제출클릭();"style='width:90px;height:30px;font-size:16px;position:absolute;top:87px;left:240px;visibility:hidden'>제출</button>
+        <button id='수정'onclick="수정클릭();"style='width:90px;height:30px;font-size:16px;position:absolute;top:87px;left:240px;visibility:hidden'>수정하기</button>
+        <div id='입력확인창'>
+        </div>
+    <div id='aaa' style='margin-top:-56px;position: absolute;
+    top: 236px;'>
+    <div id='가로가로'>
+        <form onsubmit='return false;'>
+            <div class='tt'>가로 칸수 (50 이하): </div>
+            <input  type="text" id="test1" class='start' />
+            <button onclick="send1();"style='width:60px;height:41px;font-size: 15px'>입력</button>
+        </form>
+    </div>
+    <div id='세로세로' style="visibility: hidden;margin-top: -51px;position: absolute;">
+        <form onsubmit='return false;' style="margin-top: 10px;">
+        <div class='tt'>세로 칸수 (50 이하): </div>
+        <input  type="text" id="test2" class='start'/>
+        <button onclick="send2();"style='width:60px;height:41px;font-size: 15px'>입력</button>
+        </form>  
+    </div>
+    </div>
+    </body>
+</html>
